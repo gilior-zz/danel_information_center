@@ -29,10 +29,6 @@ var AdvisorContactComponent = (function () {
         configurable: true
     });
     ;
-    AdvisorContactComponent.prototype.ngOnInit = function () {
-        this.as.loadAdvisor();
-        this.message = "sadsdf";
-    };
     AdvisorContactComponent.prototype.onMouseover = function () { console.log('onMouseover'); };
     AdvisorContactComponent.prototype.toggleState = function () {
         this.state = (this.state === 'active' ? 'inactive' : 'active');

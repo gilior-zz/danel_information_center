@@ -74,5 +74,9 @@
   {
     "outputFile": "app/transactions-tool-bar.component.css",
     "inputFile": "app/transactions-tool-bar.component.scss"
+  },
+  {
+    "outputFile": "app/language-bar.component.css",
+    "inputFile": "app/language-bar.component.scss"
   }
 ]

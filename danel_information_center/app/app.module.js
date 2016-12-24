@@ -13,12 +13,13 @@ var platform_browser_1 = require('@angular/platform-browser');
 var core_module_1 = require('./core.module');
 var app_component_1 = require('./app.component');
 var app_routing_module_1 = require('./app-routing.module');
-var information_center_module_1 = require('./information-center.module');
+//import { InformationCenterModule } from './information-center.module'
 var login_routing_module_1 = require('./login-routing.module');
 var components_barrel_1 = require('./components.barrel');
 var login_component_1 = require('./login.component');
 //import {AgGridModule} from 'ag-grid-ng2/main';
 var shared_module_1 = require('./shared.module');
+var components_barrel_2 = require('./components.barrel');
 var AppModule = (function () {
     function AppModule() {
     }
@@ -28,14 +29,14 @@ var AppModule = (function () {
                 platform_browser_1.BrowserModule,
                 app_routing_module_1.AppRoutingModule,
                 login_routing_module_1.LoginRoutingModule,
-                information_center_module_1.InformationCenterModule,
+                //InformationCenterModule,
                 //AgGridModule.forRoot(),
                 core_module_1.CoreModule,
                 shared_module_1.SharedModule
             ],
             declarations: [
                 app_component_1.AppComponent,
-                login_component_1.LoginComponent, components_barrel_1.MainSiteFooterComponent, components_barrel_1.MainSiteHeaderComponent
+                login_component_1.LoginComponent, components_barrel_1.MainSiteFooterComponent, components_barrel_1.MainSiteHeaderComponent, components_barrel_2.LanguageBarComponent
             ],
             providers: [],
             bootstrap: [app_component_1.AppComponent]

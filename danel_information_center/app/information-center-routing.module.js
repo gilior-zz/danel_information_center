@@ -22,7 +22,7 @@ var InformationCcenterRoutingModule = (function () {
             imports: [
                 router_1.RouterModule.forChild([
                     {
-                        path: 'information-center',
+                        path: '',
                         component: information_center_component_1.InformationCenterComponent,
                         canActivate: [auth_guard_service_1.AuthGuard],
                         resolve: [account_resolve_service_1.AccountResolve],
@@ -31,8 +31,8 @@ var InformationCcenterRoutingModule = (function () {
                                 path: '',
                                 canActivateChild: [auth_guard_service_1.AuthGuard],
                                 children: [
-                                    { path: '', component: components.DashboardComponent },
-                                    //{ path: '', redirectTo: 'dashboard', pathMatch: 'full' },
+                                    //{ path: '', component: components.DashboardComponent },
+                                    { path: '', redirectTo: 'dashboard', pathMatch: 'full' },
                                     //{ path: '', redirectTo: '/information-center/dashboard', pathMatch: 'full' },
                                     { path: 'dashboard', component: components.DashboardComponent },
                                     { path: 'holdings', component: components.HoldingsComponent },

@@ -1,16 +1,20 @@
-import { NgModule }     from '@angular/core';
+import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
 
 
-import { AuthGuard }  from './auth-guard.service';
+import { AuthGuard } from './auth-guard.service';
 
 @NgModule({
     imports: [
         RouterModule.forRoot([
             {
-               
+                path: 'information-center',
+                loadChildren: 'app/information-center.module#InformationCenterModule',
+
+            },
+            {
                 path: '',
-                redirectTo: '/information-center',
+                redirectTo: '/login',
                 pathMatch: 'full'
             }
         ], { useHash: true })
@@ -19,7 +23,7 @@ import { AuthGuard }  from './auth-guard.service';
         RouterModule
     ],
     providers: [
-        
+
     ]
 })
 export class AppRoutingModule { }

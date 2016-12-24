@@ -1,17 +1,16 @@
-﻿import { NgModule }     from '@angular/core';
-import { RouterModule }  from '@angular/router';
-import {AccountResolve} from './account-resolve.service'
-import {InformationCenterComponent} from './information-center.component'
-import { AuthGuard }                from './auth-guard.service';
-import * as   components from  './components.barrel'
+﻿import { NgModule } from '@angular/core';
+import { RouterModule } from '@angular/router';
+import { AccountResolve } from './account-resolve.service'
+import { InformationCenterComponent } from './information-center.component'
+import { AuthGuard } from './auth-guard.service';
+import * as   components from './components.barrel'
 
 
 @NgModule({
     imports: [
         RouterModule.forChild([
-
             {
-                path: 'information-center',
+                path: '',
                 component: InformationCenterComponent,
                 canActivate: [AuthGuard],
                 resolve: [AccountResolve],
@@ -21,8 +20,8 @@ import * as   components from  './components.barrel'
                         canActivateChild: [AuthGuard],
                         children: [
 
-                            { path: '', component: components.DashboardComponent },
-                            //{ path: '', redirectTo: 'dashboard', pathMatch: 'full' },
+                            //{ path: '', component: components.DashboardComponent },
+                            { path: '', redirectTo: 'dashboard', pathMatch: 'full' },
                             //{ path: '', redirectTo: '/information-center/dashboard', pathMatch: 'full' },
                             { path: 'dashboard', component: components.DashboardComponent },
                             { path: 'holdings', component: components.HoldingsComponent },

@@ -18,8 +18,12 @@ var AppRoutingModule = (function () {
             imports: [
                 router_1.RouterModule.forRoot([
                     {
+                        path: 'information-center',
+                        loadChildren: 'app/information-center.module#InformationCenterModule',
+                    },
+                    {
                         path: '',
-                        redirectTo: '/information-center',
+                        redirectTo: '/login',
                         pathMatch: 'full'
                     }
                 ], { useHash: true })

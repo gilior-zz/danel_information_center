@@ -1,7 +1,7 @@
-﻿import { Component, OnInit, Input, trigger, style, animate, transition, state} from '@angular/core';
-import {AdvisorProperties} from './models'
-import {AdvisorService} from './services.barrel'
-import {AuthService} from './auth.service'
+﻿import { Component, OnInit, Input, trigger, style, animate, transition, state } from '@angular/core';
+import { AdvisorProperties } from './models'
+import { AdvisorService } from './services.barrel'
+import { AuthService } from './auth.service'
 
 @Component({
     selector: 'advisor-contact',
@@ -24,7 +24,7 @@ import {AuthService} from './auth.service'
 
 
 })
-export class AdvisorContactComponent implements OnInit {
+export class AdvisorContactComponent {
     constructor(private as: AdvisorService, private aus: AuthService) {
         //$('[data-toggle="popover"]').popover()
     }
@@ -36,10 +36,7 @@ export class AdvisorContactComponent implements OnInit {
     get advisorProperties(): AdvisorProperties { return this.as.advisorProperties }
     get builtInMessages(): Array<string> { return this.as.builtInMessages };
     message: string;
-    ngOnInit() {
-        this.as.loadAdvisor();
-        this.message = "sadsdf";
-    }
+
 
     onMouseover() { console.log('onMouseover'); }
 

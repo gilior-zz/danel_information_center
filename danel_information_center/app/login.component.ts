@@ -1,9 +1,11 @@
-import { Component, OnInit }        from '@angular/core';
-import { Router,
-    NavigationExtras } from '@angular/router';
-import {AccountService, AdvisorService} from './services.barrel'
-import { AuthService }      from './auth.service';
-import {User} from './models'
+import { Component, OnInit } from '@angular/core';
+import {
+    Router,
+    NavigationExtras
+} from '@angular/router';
+import { AccountService, AdvisorService } from './services.barrel'
+import { AuthService } from './auth.service';
+import { User } from './models'
 @Component({
 
     templateUrl: `./login.component.html`,
@@ -46,7 +48,8 @@ export class LoginComponent implements OnInit {
             if (this.authService.isLoggedIn) {
                 // Get the redirect URL from our auth service
                 // If no redirect has been set, use the default
-                let redirect = this.authService.redirectUrl ? this.authService.redirectUrl : '';
+                //let redirect = this.authService.redirectUrl ? this.authService.redirectUrl : '';
+                let redirect = this.user.name == 'admin' ? 'admin-center' : 'information-center';
 
                 // Set our navigation extras object
                 // that passes on our global query params and fragment

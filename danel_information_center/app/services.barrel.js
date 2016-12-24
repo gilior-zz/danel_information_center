@@ -1,4 +1,6 @@
 "use strict";
+var advisor_service_1 = require('./advisor.service');
+exports.AdvisorService = advisor_service_1.AdvisorService;
 var holdings_data_service_1 = require('./holdings-data.service');
 exports.HoldingsDataService = holdings_data_service_1.HoldingsDataService;
 var performance_data_service_1 = require('./performance-data.service');
@@ -15,6 +17,6 @@ var page_name_service_1 = require('./page-name.service');
 exports.pageNameService = page_name_service_1.pageNameService;
 var summary_values_service_1 = require('./summary-values.service');
 exports.SummaryValuesService = summary_values_service_1.SummaryValuesService;
-var advisor_service_1 = require('./advisor.service');
-exports.AdvisorService = advisor_service_1.AdvisorService;
+var admin_service_1 = require('./admin.service');
+exports.AdminService = admin_service_1.AdminService;
 //# sourceMappingURL=services.barrel.js.map

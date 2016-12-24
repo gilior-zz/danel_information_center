@@ -68,10 +68,22 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="app\admin-center.component.html" />
+    <Content Include="app\admin-home.component.html" />
+    <Content Include="app\language-bar.component.css">
+      <DependentUpon>language-bar.component.scss</DependentUpon>
+    </Content>
+    <Content Include="app\language-bar.component.html" />
+    <Content Include="app\language-bar.component.min.css">
+      <DependentUpon>language-bar.component.css</DependentUpon>
+    </Content>
     <Content Include="packages.config" />
     <Content Include="package.json" />
     <Content Include="tsconfig.json" />
     <Content Include="typings.json" />
+    <Content Include="app\language-bar.component.scss" />
+    <Content Include="app\admin-home.component.scss" />
+    <Content Include="app\admin-center.component.scss" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -289,6 +301,11 @@
     <TypeScriptCompile Include="app\account-resolve.service.ts" />
     <TypeScriptCompile Include="app\account.service.ts" />
     <TypeScriptCompile Include="app\accounts-list.component.ts" />
+    <TypeScriptCompile Include="app\admin-center.component.ts" />
+    <TypeScriptCompile Include="app\admin-home.component.ts" />
+    <TypeScriptCompile Include="app\admin-routing.module.ts" />
+    <TypeScriptCompile Include="app\admin.module.ts" />
+    <TypeScriptCompile Include="app\admin.service.ts" />
     <TypeScriptCompile Include="app\advisor-contact.component.ts" />
     <TypeScriptCompile Include="app\advisor.service.ts" />
     <TypeScriptCompile Include="app\app-routing.module.ts" />
@@ -321,6 +338,7 @@
     <TypeScriptCompile Include="app\information-center.component.ts" />
     <TypeScriptCompile Include="app\information-center.module.ts" />
     <TypeScriptCompile Include="app\information-summary-panel.component.ts" />
+    <TypeScriptCompile Include="app\language-bar.component.ts" />
     <TypeScriptCompile Include="app\location-printer.directive.ts" />
     <TypeScriptCompile Include="app\login-routing.module.ts" />
     <TypeScriptCompile Include="app\login.component.ts" />

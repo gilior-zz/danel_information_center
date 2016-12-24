@@ -1,7 +1,7 @@
-﻿import { Injectable }   from '@angular/core';
+﻿import { Injectable } from '@angular/core';
 
-import {HoldingsGroupType, AccountHoldingsGroupsUnits, AccountProperties, HoldingsToGroup, HoldingGroupUnit} from './models'
-import { Subscription }   from 'rxjs/Subscription';
+import { HoldingsGroupType, AccountHoldingsGroupsUnits, AccountProperties, HoldingsToGroup, HoldingGroupUnit } from './models'
+import { Subscription } from 'rxjs/Subscription';
 import 'rxjs/add/observable/of';
 import 'rxjs/add/operator/do';
 import 'rxjs/add/operator/delay';

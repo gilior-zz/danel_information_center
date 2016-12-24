@@ -19,6 +19,9 @@ var MainSiteHeaderComponent = (function () {
         this.aus = aus;
         this.as = as;
     }
+    MainSiteHeaderComponent.prototype.ngOnInit = function () {
+        this.as.loadAdvisor();
+    };
     Object.defineProperty(MainSiteHeaderComponent.prototype, "advisorProperties", {
         get: function () { return this.as.advisorProperties; },
         enumerable: true,

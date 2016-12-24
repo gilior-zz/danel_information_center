@@ -10,10 +10,17 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 var core_1 = require('@angular/core');
 var services_barrel_1 = require('./services.barrel');
+var services_barrel_2 = require('./services.barrel');
 var AccountsListComponent = (function () {
-    function AccountsListComponent(as) {
+    function AccountsListComponent(as, pn) {
         this.as = as;
+        this.pn = pn;
     }
+    Object.defineProperty(AccountsListComponent.prototype, "hideAccountList", {
+        get: function () { return this.pn.currentPageName == 'profile'; },
+        enumerable: true,
+        configurable: true
+    });
     AccountsListComponent.prototype.onAccountChanged = function (account) { this.as.updateAccount(account); };
     AccountsListComponent.prototype.ngOnDestroy = function () {
         //this.accountsSubscription.unsubscribe();
@@ -38,7 +45,7 @@ var AccountsListComponent = (function () {
     };
     AccountsListComponent = __decorate([
         core_1.Component({ selector: 'accounts-list', moduleId: module.id, templateUrl: './accounts-list.component.html', styleUrls: ['./accounts-list.component.css'] }), 
-        __metadata('design:paramtypes', [services_barrel_1.AccountService])
+        __metadata('design:paramtypes', [services_barrel_2.AccountService, services_barrel_1.pageNameService])
     ], AccountsListComponent);
     return AccountsListComponent;
 }());

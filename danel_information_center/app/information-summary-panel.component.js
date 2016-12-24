@@ -42,6 +42,7 @@ var InformationSummaryPanelComponent = (function () {
     InformationSummaryPanelComponent.prototype.setStructure = function () {
         switch (this.pn.currentPageName) {
             case "holdings":
+            case "profile":
                 this.hideInformationSummaryPanelComponent = true;
                 break;
             case "dashboard":

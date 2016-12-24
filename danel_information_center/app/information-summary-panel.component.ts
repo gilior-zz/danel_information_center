@@ -1,7 +1,7 @@
-﻿import {Component, OnInit, OnDestroy} from '@angular/core'
-import { Subscription }   from 'rxjs/Subscription';
-import {SummaryValuesService, pageNameService} from './services.barrel'
-import {AccountProperties, PerformanceSummaryValues, TransactionsSummaryValues} from './models'
+﻿import { Component, OnInit, OnDestroy } from '@angular/core'
+import { Subscription } from 'rxjs/Subscription';
+import { SummaryValuesService, pageNameService } from './services.barrel'
+import { AccountProperties, PerformanceSummaryValues, TransactionsSummaryValues } from './models'
 @Component({ selector: 'information-summary-panel', moduleId: module.id, templateUrl: 'information-summary-panel.component.html', styleUrls: ['./information-summary-panel.component.css'] })
 
 export class InformationSummaryPanelComponent implements OnInit, OnDestroy {
@@ -38,7 +38,9 @@ export class InformationSummaryPanelComponent implements OnInit, OnDestroy {
 
     setStructure() {
         switch (this.pn.currentPageName) {
+
             case "holdings":
+            case "profile":
                 this.hideInformationSummaryPanelComponent = true;
                 break;
             case "dashboard":

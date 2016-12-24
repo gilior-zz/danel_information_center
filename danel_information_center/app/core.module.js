@@ -16,7 +16,7 @@ var CoreModule = (function () {
     }
     CoreModule = __decorate([
         core_1.NgModule({
-            providers: [services_barrel_1.AccountService, services_barrel_1.pageNameService, services_barrel_1.SummaryValuesService, services_barrel_1.ParameterService, holdings_data_service_1.HoldingsDataService, services_barrel_1.PerformanceDataService, services_barrel_1.TransactiosDataService, services_barrel_1.UserService, services_barrel_1.AdvisorService]
+            providers: [services_barrel_1.AccountService, services_barrel_1.pageNameService, services_barrel_1.SummaryValuesService, services_barrel_1.ParameterService, holdings_data_service_1.HoldingsDataService, services_barrel_1.PerformanceDataService, services_barrel_1.TransactiosDataService, services_barrel_1.UserService, services_barrel_1.AdvisorService, services_barrel_1.AdminService]
         }), 
         __metadata('design:paramtypes', [])
     ], CoreModule);
